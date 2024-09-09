@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/thea/miniconda3/bin/python python3
 # -*- coding: utf-8 -*-
 """
 Created on Fri Aug 16 16:47:17 2024
@@ -8,9 +8,9 @@ Created on Fri Aug 16 16:47:17 2024
 
 import sys
 import os
+import time
 import nibabel as nib
 import matplotlib.pyplot as plt
-import time
 
 class Interact:
     def __init__(self, data, dims, axes):
