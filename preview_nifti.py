@@ -57,9 +57,9 @@ class Interact:
             self.update_images()# Update images
 
     def update_images(self): # Update all images - Could be made more efficient if only relevant images are updates
-        self.axes[0].imshow(self.data[self.image_index[0], :, :].T, cmap='gray', origin='lower', aspect=self.dims[3]/self.dims[1])
-        self.axes[1].imshow(self.data[:, self.image_index[1], :].T, cmap='gray', origin='lower', aspect=self.dims[3]/self.dims[2])
-        self.axes[2].imshow(self.data[:, :, self.image_index[2]].T, cmap='gray', origin='lower', aspect=self.dims[1]/self.dims[2])
+        self.axes[0].imshow(self.data[self.image_index[0], :, :].T, cmap='gray', origin='lower', aspect=self.dims[3]/self.dims[2])
+        self.axes[1].imshow(self.data[:, self.image_index[1], :].T, cmap='gray', origin='lower', aspect=self.dims[3]/self.dims[1])
+        self.axes[2].imshow(self.data[:, :, self.image_index[2]].T, cmap='gray', origin='lower', aspect=self.dims[2]/self.dims[1])
         self.update_titles()
 
     def update_titles(self):
@@ -113,4 +113,4 @@ if len(sys.argv) > 1:
     except Exception as e:
         input(f"Error loading NIfTI file: {e}\n") # Error incase the preview goes wrong
 else:
-    input("No file specified XO\n")
+    input("No File Specified")
